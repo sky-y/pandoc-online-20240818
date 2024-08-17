@@ -240,4 +240,8 @@ $ typst compile example-pandoc.typ
   - デフォルトのテンプレートが使いにくいので自作が必要
   - 既存のLaTeXやMarkdown文書の資産を移行するのには役立ちそう
 
+## サンプルコード
 
+- [GitHub - sky-y/pandoc-online-20240818](https://github.com/sky-y/pandoc-online-20240818)
+
+# おわり
