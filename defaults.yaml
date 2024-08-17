@@ -1,0 +1,9 @@
+to: beamer
+pdf-engine: lualatex
+listings: true
+slide-level: 2
+verbosity: INFO
+variables:
+  luatexjapresetoptions: haranoaji
+  aspectratio: 169
+  theme: Singapore

@@ -1,0 +1,4 @@
+variables:
+  mainfont: "Harano Aji Mincho"
+  papersize: a4
+  lang: ja

@@ -1,0 +1,50 @@
+% 発音記号
+\usepackage{tipa}
+
+% 既定をゴシック体に
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+% ヘッダを消す
+% \beamertemplatenavigationsymbolsempty
+% \setbeamertemplate{headline}{}
+
+% フットラインにフレーム番号を挿入
+\setbeamertemplate{footline}[frame number]
+% 大きさを\normalsizeに変更，色をgrayに変更
+\setbeamerfont{page number in head/foot}{size=\scriptsize}
+\setbeamercolor{page number in head/foot}{fg=gray}
+
+% listings
+\lstset{
+    frame=none,         % 枠設定
+    breaklines=true,    % 行が長くなった場合自動改行
+    breakindent=12pt,   % 自動改行時のインデント
+    columns=fixed,      % 文字の間隔を統一
+    basewidth=0.5em,    % 文字の横のサイズを小さく
+    % numbers=left,       % 行数の位置
+    % numberstyle={\tiny \color{white}},  % 行数のフォント
+    % stepnumber=1,       % 行数の増間
+    % numbersep=1\zw,      % 行数の余白   
+    xleftmargin=0\zw,    % 左の余白
+    xrightmargin=0\zw,   % 右の余白
+    aboveskip=0.5\zw,      % 上の余白
+    belowskip=0.5\zw,      % 下の余白
+    framexleftmargin=0.5\zw,  % フレームからの左の余白
+    keepspaces=true,    % スペースを省略せず保持
+    lineskip=-0.3ex,    % 枠線の途切れ防止
+    tabsize = 4,        % タブ数
+    showstringspaces=false,  %文字列中の半角スペースを表示させない
+    %%%%% VSCode風 の style & color %%%%%
+    backgroundcolor={\color[gray]{0.1}},                    %背景色
+    basicstyle     ={\small\ttfamily \color{white}},        % 基礎の文字のフォント設定
+}
+
+% インラインコードの設定
+\usepackage{xpatch}
+\usepackage{xcolor}
+\usepackage{realboxes}
+\definecolor{mygray}{rgb}{0.1,0.1,0.1}
+
+\makeatletter
+\xpretocmd\lstinline{\Colorbox{mygray}\bgroup\appto\lst@DeInit{\egroup}}{}{}
+\makeatother
